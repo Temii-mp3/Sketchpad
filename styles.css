@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+#container{
+    display: flex;
+    flex: 1;
+    padding: 50px;
+    flex-wrap: wrap;
+    border: 8px, solid, brown;
+}
+
+
+#container div{
+    border: 1px solid black;
+    padding: 51px;
+}
