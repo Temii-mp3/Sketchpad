@@ -4,6 +4,12 @@
 }
 
 
+#container{
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
 body{
     display: flex;
     justify-content: center;
@@ -16,9 +22,8 @@ body{
     padding: 20px;
 }
 
-#sketchArea{
-    margin: 0;
-    padding: 20px 0px;
+.sketchBody{
+    margin: 0px;
 }
 
 .gridRow{

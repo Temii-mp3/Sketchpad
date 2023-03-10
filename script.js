@@ -1,6 +1,20 @@
 let container = document.querySelector("#container");
 
-let sketchArea = document.querySelector('#sketchArea');
+const newGrid = document.createElement('button');
+newGrid.innerHTML = "New Grid";
+container.appendChild(newGrid);
+
+const reset = document.createElement('button');
+reset.innerHTML = "Reset";
+reset.className = ('reset');
+reset.addEventListener('click', () =>{
+  location.reload();
+})
+container.appendChild(reset);
+
+let sketchArea = document.createElement('div');
+container.appendChild(sketchArea);
+sketchArea.classList.add('sketchBody');
 
 let rows = document.getElementsByClassName('gridRow');
 let row;
@@ -8,13 +22,9 @@ let colum;
 
 
 
-const newGrid = document.createElement('button');
-newGrid.innerHTML = "New Grid";
 
-const reset = document.createElement('button');
-reset.innerHTML = "Reset";
-reset.className = ('reset');
-container.appendChild(reset);
+
+
 
 newGrid.addEventListener('click', ()=>{
   let userRows = prompt('how many rows');
@@ -30,7 +40,7 @@ newGrid.addEventListener('click', ()=>{
       makeColums(userColums);
     }
 });
-    container.appendChild(newGrid);
+
 
 
 function makeRows(numRows){
